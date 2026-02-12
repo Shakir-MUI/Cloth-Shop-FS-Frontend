@@ -72,9 +72,7 @@ function ProductCard({ product }) {
   };
 
   /* ✅ SAFE IMAGE HANDLING */
-  const imageUrl = product.display_image
-    ? `http://localhost:8000${product.display_image}`
-    : "https://via.placeholder.com/300";
+  const imageUrl = product.image || "https://via.placeholder.com/300";
 
   return (
     <Card className="h-100 product-card position-relative">

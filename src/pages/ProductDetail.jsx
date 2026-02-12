@@ -169,11 +169,7 @@ function ProductDetail() {
                 <Carousel.Item key={i}>
                   <div className="zoom-container">
                     <img
-                      src={
-                        img.startsWith("http")
-                          ? img
-                          : `http://localhost:8000${img}`
-                      }
+                      src={img}
                       className="d-block w-100 zoom-image"
                       style={{
                         height: "600px",
@@ -194,9 +190,7 @@ function ProductDetail() {
               {carouselImages.map((img, i) => (
                 <img
                   key={i}
-                  src={
-                    img.startsWith("http") ? img : `http://localhost:8000${img}`
-                  }
+                  src={img}
                   onClick={() => setActiveIndex(i)}
                   style={{
                     width: 80,
